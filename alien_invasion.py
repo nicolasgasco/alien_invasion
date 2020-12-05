@@ -49,6 +49,10 @@ class AlienInvasion:
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = True
         # Quits the game when pressing q
+        elif event.key == pygame.K_w or event.key == pygame.K_UP:
+            self.ship.moving_up = True
+        elif event.key == pygame.K_s or event.key == pygame.K_DOWN:
+            self.ship.moving_down = True
         elif event.key == pygame.K_q:
             sys.exit()
 
@@ -59,6 +63,10 @@ class AlienInvasion:
             self.ship.moving_right = False
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = False
+        elif event.key == pygame.K_w or event.key == pygame.K_UP:
+            self.ship.moving_up = False
+        elif event.key == pygame.K_s or event.key == pygame.K_DOWN:
+            self.ship.moving_down = False
 
 
     def _update_screen(self):
