@@ -80,8 +80,8 @@ class AlienInvasion:
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = True
         # Moves the ship upwards
-        elif event.key == pygame.K_w or event.key == pygame.K_UP:
-            self.ship.moving_up = True
+        # elif event.key == pygame.K_w or event.key == pygame.K_UP:
+            # self.ship.moving_up = True
         # Moves the ship downwards
         elif event.key == pygame.K_s or event.key == pygame.K_DOWN:
             self.ship.moving_down = True
@@ -89,7 +89,7 @@ class AlienInvasion:
         elif event.key == pygame.K_q:
             sys.exit()
         # Shoots using spacebar
-        elif event.key == pygame.K_SPACE:
+        elif event.key == pygame.K_SPACE or event.key == pygame.K_RETURN:
             self._fire_bullet()
 
 
@@ -99,8 +99,8 @@ class AlienInvasion:
             self.ship.moving_right = False
         elif event.key == pygame.K_a or event.key == pygame.K_LEFT:
             self.ship.moving_left = False
-        elif event.key == pygame.K_w or event.key == pygame.K_UP:
-            self.ship.moving_up = False
+        # elif event.key == pygame.K_w or event.key == pygame.K_UP:
+           # self.ship.moving_up = False
         elif event.key == pygame.K_s or event.key == pygame.K_DOWN:
             self.ship.moving_down = False
 
@@ -175,7 +175,6 @@ class AlienInvasion:
             alien.rect.y += self.settings.fleet_drop_speed
         self.settings.fleet_direction *= -1
 
-        
 
 if __name__ == '__main__':
     # Make a game instance and run the game
